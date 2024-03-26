@@ -16,7 +16,7 @@ class Mamifero(Animal):
         Mamifero.listado.append(self)
 
     ##setter y getter
-    def getPelaje(self):
+    def isPelaje(self):
         return self._pelaje
     
     def setPelaje(self, boo):
