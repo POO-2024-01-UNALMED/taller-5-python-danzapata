@@ -1,3 +1,10 @@
+##imports
+from zooAnimales.anfibio import Anfibio
+from zooAnimales.ave import Ave
+from zooAnimales.mamifero import Mamifero
+from zooAnimales.pez import Pez
+from zooAnimales.reptil import Reptil
+
 ##clase 
 class Animal:
 
@@ -48,10 +55,12 @@ class Animal:
     def movimiento(self):
         return "desplazarse"
     
-    ##total pot tipo
+    @classmethod
+    def totalPorTipo(cls):
+        return f"Mamiferos : {Mamifero.cantidadMamiferos()}\nAves : {Ave.cantidadAves()}\nReptiles : {Reptil.cantidadReptil()}\nPeces : {Pez.cantidadPeces}\nAnfibios : {Anfibio.cantidadAnfibios}"
 
     def __str__(self):
-        return "“Mi nombre es",self._nombre,"tengo una edad de", self._edad,"habito en", self._habitat,"y mi genero es",self._genero,"la zona en la que me ubico es", self._zona," en el", self._zona.getZoo()
+        return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat}, y mi genero es {self._genero}, la zona en la que me ubico es {self._zona}, en el {self._zona.getZoo()}"
 
 
 
